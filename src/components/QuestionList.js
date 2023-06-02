@@ -1,11 +1,11 @@
 import React from "react";
 import QuestionItem from "./QuestionItem";
 
-function QuestionList({ questionList, onDeleteClick }) {
+function QuestionList({ questionList, onDeleteClick, onUpdateQuestion }) {
   
   const displayedList = questionList.map((question => {
     return (
-      <QuestionItem onDeleteClick={onDeleteClick} question={question} key={question.id} />
+      <QuestionItem onUpdateQuestion={onUpdateQuestion} onDeleteClick={onDeleteClick} question={question} key={question.id} />
     )
   }))
 
